@@ -6,7 +6,7 @@ const vendorroute=require('./routes/vendorroutes')
 const firmroutes=require('./routes/firmroutes')
 const productroutes=require('./routes/productroutes')
 // const bodyParser = require('body-parser');
-const port=4000;
+const port=process.env.PORT||4000;
 dotenv.config();
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
