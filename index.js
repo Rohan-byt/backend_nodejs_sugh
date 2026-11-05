@@ -14,7 +14,7 @@ app.use('/product',productroutes);
 app.use('/vendor',vendorroute);
 app.use('/firm',firmroutes);
 app.use('/uploads',express.static('uploads'));
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('welcome to home')
 })
 mongoose.connect(process.env.MONGODB_URI).then(()=>{console.log('mongodb connected succcessfully ');
